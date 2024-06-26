@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--main-primary-color);
+  color: var(--main-text-color);
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 300px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  color: var(--main-text-color);
+  text-decoration: none; /* Remover sublinhado padrão */
+  transition: color 0.3s ease; /* Transição suave na cor do texto */
+}
+
+a:hover {
+  color: #ffffff; /* Cor ao passar o mouse */
+}
+
+.content {
+  align-items: center;
+  background-size: auto 150px;
+  background-repeat: repeat-x;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px; /* Maior espaçamento interno */
+  padding-top: 90px;
+  overflow-y: auto;
+}
+
+.input {
+  color: var(--main-text-color);
+  width: 100%;
+  padding: 12px; /* Mais espaçamento interno */
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Borda suave */
+  background-color: var(--main-thirty-color); /* Cor de fundo personalizada */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+}
+
+.input::placeholder {
+  color: #888; /* Cor do placeholder */
+}
+
+.input:focus {
+  outline: none; /* Remover contorno ao focar */
+  border-color: var(--main-second-color); /* Cor da borda ao focar */
+}
+
+.btn {
+  background-color: var(--main-second-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--main-text-color);
+  padding: 10px 25px; /* Maior espaçamento interno */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+}
+
+.btn:hover {
+  background-color: #0f7164; /* Escurecimento ao passar o mouse */
+}
+
+.mb-5 {
+  margin-bottom: 20px;
+}
+
+.addMarkerDialog {
+  background-color: var(--main-primary-color);
+  font-size: 14px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 8px;
+  z-index: 1;
+}
